@@ -63,7 +63,7 @@
       <section class="hero-section">
         <div class="container">
           <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-          <button type="button" class="button">Замовити послугу</button>
+          <button type="button" class="button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -123,6 +123,7 @@
           </ul>
         </div>
       </section>
+
       <!-- What we do -->
       <section class="section-work">
         <div class="container work">
@@ -135,6 +136,9 @@
                 class="photo"
                 alt="Поверхня робочого столу з відкритим ноутбуком та робочими матеріалами"
               />
+              <div class="descr-position">
+                <p class="descr-position-text">Десктопні додатки</p>
+              </div>
             </li>
             <li class="work-item">
               <img
@@ -143,6 +147,9 @@
                 class="photo"
                 alt="Відкритий ноутбук з варіантами розмітки екранів телефонів"
               />
+              <div class="descr-position">
+                <p class="descr-position-text">Мобільні додатки</p>
+              </div>
             </li>
             <li class="work-item">
               <img
@@ -151,6 +158,9 @@
                 class="photo"
                 alt="Планшет з палітрою кольорів"
               />
+              <div class="descr-position">
+                <p class="descr-position-text">Дизайнерські рішення</p>
+              </div>
             </li>
           </ul>
         </div>
@@ -443,5 +453,22 @@
       </div>
     </div>
     </footer>
+
+    <!-- Модальне вікно -->
+
+    <!-- <button data-modal-open>Замовити послугу</button> вона в секції Герой-->
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <!-- <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse quo nesciunt repellat perferendis sint facere sed voluptatem hic eligendi consectetur, mollitia, dicta nostrum rerum harum doloribus debitis! Mollitia, eveniet quisquam.</p> -->
+        <button class="close-btn" data-modal-close>
+          <svg class="close-btn-image" width="30" height="30">
+            <use href="./images/sprite.svg#icon-close">          
+            </use>
+          </svg>
+          </button>
+      </div>
+      
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>

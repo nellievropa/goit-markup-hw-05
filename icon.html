@@ -63,6 +63,45 @@
         </div>
       </section>
 
+      <!--     Модальне вікно -->
+      <div class="main-page">
+        <a href="./index.html"> Back to Main page </a>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum harum
+          impedit nostrum aperiam fugiat sequi id eligendi dolorem maiores,
+          nihil ipsa animi perferendis asperiores consequatur voluptate debitis.
+          Saepe, facilis accusantium.
+        </p>
+        <button data-modal-open>Open Modal Window</button>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur
+          quia ullam doloremque ea repellat corporis illo itaque reprehenderit
+          officiis possimus! Soluta, nam perferendis eaque minus corrupti fugiat
+          sequi quidem neque.
+        </p>
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
+            et? Recusandae quae saepe illo doloribus, est, porro qui libero
+            dolore mollitia eveniet quasi enim, similique laboriosam repellendus
+            distinctio voluptas soluta? Enim dolores ex consequuntur veritatis
+            illo velit fugit cum ea similique qui facere, ratione quasi porro id
+            quia praesentium, perferendis ipsum voluptate harum repellendus
+            cumque debitis. Iusto alias amet in. Dolor, reprehenderit asperiores
+            cum quo rerum accusantium illo dolores aut, facilis quae minima
+            quaerat, ipsum culpa est molestiae hic cupiditate voluptate quidem!
+            Repudiandae quas non tenetur ullam, sapiente eveniet sint assumenda
+            iure amet quasi voluptate aut consequuntur ea autem saepe.
+          </p>
+          <button data-modal-close>Закрити</button>
+        </div>
+      </div>
+      </div>
+
+
+
+<!-- 
       <div class="main-page">
         <a href="./index.html"> Back to Main page </a>
         <p>
@@ -93,44 +132,47 @@
             <button>Close</button>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- Our features -->
 
       <section class="feature-section">
+        <button class="btn">Sing up</button>
 
-        <button class="btn">Sing up </button>
+        <!-- анімовані іконки  -->
+        <button class="btn1">Sing up</button>
 
-<!-- анімовані іконки  -->
-        <button class="btn1">Sing up </button>
-        
         <ul class="menu">
-          <li class="menu-item"><a href="" class="menu-link">Комплектуючі</a>
+          <li class="menu-item">
+            <a href="" class="menu-link">Комплектуючі</a>
             <ul class="submenu">
               <li>
-                <a href="" >Холодильник 1</a>
+                <a href="">Холодильник 1</a>
               </li>
-              <li><a href="" >Холодильник 2</a></li>
-              <li><a href="" >Холодильник 3</a></li>
-              <li><a href="" >Холодильник 4</a></li>
-              <li><a href="" >Холодильник 5</a></li>
-            </ul></li>
-          <li class="menu-item"><a href="" class="menu-link">Товари для дому</a>
+              <li><a href="">Холодильник 2</a></li>
+              <li><a href="">Холодильник 3</a></li>
+              <li><a href="">Холодильник 4</a></li>
+              <li><a href="">Холодильник 5</a></li>
+            </ul>
+          </li>
+          <li class="menu-item">
+            <a href="" class="menu-link">Товари для дому</a>
             <ul class="submenu">
               <li>
-                <a href="" >Холодильник 1</a>
+                <a href="">Холодильник 1</a>
               </li>
-              <li><a href="" >Холодильник 2</a></li>
-              <li><a href="" >Холодильник 3</a></li>
-              <li><a href="" >Холодильник 4</a></li>
-              <li><a href="" >Холодильник 5</a></li>
-            </ul></li>
+              <li><a href="">Холодильник 2</a></li>
+              <li><a href="">Холодильник 3</a></li>
+              <li><a href="">Холодильник 4</a></li>
+              <li><a href="">Холодильник 5</a></li>
+            </ul>
+          </li>
 
-<!-- Підкреслення елементу -->
+          <!-- Підкреслення елементу -->
 
-
-          <li class="menu-item"><a href="" class="menu-link">Побутова техніка</a>
-          <!-- <ul class="submenu">
+          <li class="menu-item">
+            <a href="" class="menu-link">Побутова техніка</a>
+            <!-- <ul class="submenu">
             <li>
               <a href="" >Холодильник 1</a>
             </li>
@@ -141,8 +183,6 @@
           </ul> -->
           </li>
         </ul>
-
-
 
         <div class="container">
           <h2 class="visually-hidden">Наші особливості</h2>
@@ -177,18 +217,24 @@
           </ul>
         </div>
       </section>
+
       <!-- What we do -->
       <section class="section-work">
         <div class="container work">
           <h2 class="section-title">Чим ми займаємося</h2>
+
           <ul class="work-list">
             <li class="work-item">
-              <img
-                src="./images/Works/work-place.jpg"
-                width="370"
-                class="photo"
-                alt="Поверхня робочого столу з відкритим ноутбуком та робочими матеріалами"
-              />
+              <!-- эффект виъджаючого оверлея -->
+
+              <div class="product-thumb">
+                <img
+                  src="./images/Works/work-place.jpg"
+                  width="370"
+                  class="photo"
+                  alt="Поверхня робочого столу з відкритим ноутбуком та робочими матеріалами"
+                />
+              </div>
             </li>
             <li class="work-item">
               <img
@@ -288,5 +334,6 @@
         </address>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
