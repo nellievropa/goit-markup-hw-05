@@ -91,11 +91,11 @@ a {
   letter-spacing: 0.03em;
   /* margin-left: 215px; */
   /* margin-right: 93px; */
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .logo-brand {
   color: var(--brand-color);
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .logo:hover {
   color: var(--text-color-gray);
@@ -149,7 +149,7 @@ a {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .site-nav .link:hover,
 .site-nav .link:focus {
@@ -193,7 +193,7 @@ li.item {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .contact-nav .link:hover,
 .contact-nav .link:focus {
@@ -346,7 +346,7 @@ li.item {
   border-radius: 4px;
   /* min-width: 216; можно задавать, чтобы тект не вылазил за границы кнопок */
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .button:hover,
 .button:focus {
@@ -476,14 +476,16 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
   margin-bottom: 0;
 }
 .work-item {
+  position: relative;
+
   display: block;
   margin-right: 30px;
-  position: relative;
+ 
 }
 .work-item:last-child {
   margin-right: 0;
 }
-.work-item::after {
+/* .work-item::after {
   content: "";
   position: absolute;
 
@@ -494,20 +496,27 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
 
   left: 0;
   bottom: 0;
-}
+} */
 .descr-position {
   position: absolute;
+
   display: inline-block;
+  width: 100%;
+  height: 70px;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  left: 0;
+  bottom: 0;
   /* flex-wrap: wrap; */
   /* text-align: center;
   justify-content:center; */
   /* align-items: center;
   position: absolute; */
   /* left: 107px; */
-  bottom: 0;
+  /* bottom: 0; */
   z-index: 3;
 }
-.descr-position.first {
+/* .descr-position.first {
   left: 107px;
 }
 .descr-position.second {
@@ -515,7 +524,7 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
 }
 .descr-position.third {
   left: 95px;
-}
+} */
 
 .descr-position-text {
   /* padding: 27px 0; */
@@ -624,7 +633,7 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
   fill: var(--icon-color);
   /* background-color:pink; */
 
-  transition: transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .social-list {
   display: flex;
@@ -635,7 +644,7 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
 .social-list-item {
   margin-right: 10px;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .social-list-item:nth-child(4) {
   margin-right: 0;
@@ -695,7 +704,7 @@ height: 92px; */
   border-radius: 4px;
   fill: var(--icon-color);
 
-  transition: transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 /* li */
 .clients-link-list {
@@ -728,7 +737,7 @@ height: 92px; */
   /* background-color: #2196f3; */
   /* fill: var(--icon-color); */
 
-  transition: transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 .client-icon:nth-child(6) {
   margin-right: 0;
@@ -789,7 +798,7 @@ height: 92px; */
   list-style: none;
   text-decoration: none;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .footer-nav .link:hover,
 .footer-nav .link:focus {
@@ -836,7 +845,7 @@ height: 92px; */
   fill: var(--white);
   background: rgba(255, 255, 255, 0.1);
 
-  transition: transform 250ms var(--timing-function);
+  transition: fill 250ms var(--timing-function);
 }
 /* UL */
 .social-list-footer {
@@ -893,7 +902,7 @@ height: 92px; */
   text-align: center;
 
   /* border: 2px solid transparent; - прозрачная рамка если нужно */
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .button-secondary:hover,
 .button-secondary:focus {
@@ -976,7 +985,7 @@ a {
 .work-item-card {
   display: block;
 
-  transition: transform 250ms var(--timing-function);
+  transition: color 250ms var(--timing-function);
 }
 .work-item-card:hover,
 .work-item-card:focus {
@@ -1041,16 +1050,19 @@ a {
   background-color: rgba(0, 0, 0, 0.2);
 
   opacity: 1;
-  transition: opacity 250ms var(--timing-function);
+  transition: opacity 250ms var(--timing-function),
+  visibility 250ms var(--timing-function);
 }
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, 0) scale(1.3);
-  opacity: 0;
+  transform: translate(-50%, 0) scale(0.3);
+  /* opacity: 0; */
+  visibility: hidden;
 }
 .modal {
   position: absolute;
@@ -1065,10 +1077,11 @@ a {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  opacity: 1;
+  /* opacity: 1; */
+  visibility: visible;
   transform: translate(-50%, -50%) scale(1);
   transition: transform 250ms var(--timing-function),
-    opacity(1) 250ms var(--timing-function);
+    visibility 250ms var(--timing-function);
 }
 
 .close-btn {
