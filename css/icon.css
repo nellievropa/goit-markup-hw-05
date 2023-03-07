@@ -325,3 +325,10 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   background-color: beige;
   transform: translate(-50%, -50%) scale(0.5);
 }
+
+
+/* Form for add information */
+
+textarea {
+  resize: none;
+}

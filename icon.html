@@ -256,7 +256,7 @@
         </div>
       </section>
       <!-- Our team -->
-      <section class="section-team">
+      <!-- <section class="section-team">
         <div class="container">
           <h2 class="section-title team">Наша команда</h2>
           <ul class="team-list">
@@ -310,30 +310,106 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
+
+      <!-- autocomplete включає або виключає підсказки браузера !! те, що ти вводив раніше -->
+   
+<form class="js-speaker-form" autocomplete="off">
+
+  <!-- вводим имя, телефон и почту -->
+  <!-- автофокус один на сторінці! де стоїть, те і буде активне для введення данних -->
+  <!-- Placeholder-це пізсказка, як вводити прравильно данні -->
+  <label for="name">Ім'я</label>
+  <input type="text" name="user-name" id="name" placeholder="Іван Федорович" autofocus/>
+
+  <label for="tel">Номер телефону</label>
+  <input type="tel" name="user-tel" id="tel">
+
+  <label for="mail">Адреса електронної пошти</label>
+  <input type="email" name="user-mail" id="mail" autocomplete="on">
+  <br>
+
+<!-- выбирем темы, на которые хотим делать доклад ЧЕКБОКС -выбираем многое из многого-->
+<!-- name has to be the same  -->
+<div role="group" class="">
+  <input type="checkbox" name="topic" value="html" id="html">
+<label for="html">HTML</label>
+<br>
+<input type="checkbox" name="topic" value="css" id="css" >
+<label for="css">CSS</label>
+<br>
+<input type="checkbox" name="topic" value="pyton" id="pyton" >
+<label for="pyton">PYTON</label>
+</div>
+<br>
+<!-- Выбирем свой уровень разработчика Радіобаттон- вибір одного з багатьох!!!-->
+<!-- У группі должен біть одинаковій name!!! важно!!! чтобі можно біло вібрать только одно значение -->
+<!-- checked - вибирає позицію, якщо він десь визначений у input  -->
+<input type="radio" name="experience" value="junior" id="junior"/>
+<label for="junior">Junior</label>
+
+<input type="radio" name="experience" value="middle" id="middle"/>
+<label for="middle">Middle</label>
+
+<input type="radio" name="experience" value="senior" id="senior" />
+<label for="senior">Seniore</label>
+
+<!-- Дата та час складно оформлювати, тому використовують кастомні оформлення (готові)-->
+<br>
+<label for="date">Дата докладу</label>
+<input type="datetime-local" name="date" id="date" min="2020-03-12T12:30"
+max="2025-12-25T12:30">
+
+<!-- Выбира6ем на кого ориентирован доклад -->
+
+
+<!--  Загружаем презентацію: спеціальний атрибут-file -дозволяє вибрати ізагрузити файл з компа -->
+<br>
+<label for="pdf">Завантажте файл в форматі ПДФ</label>
+<input type="file" name="pdf" id="pdf">
+
+<!-- Залишити коментар щоб закрити користувачу можливість змінювати розмір поля в css додаємо властивість resize -->
+<br>
+<label for="comment">Залиште свій коментар</label>
+<textarea name="comment" id="comment"  rows="10" placeholder="Залишити коментар"></textarea>
+
+
+<!-- Підтверджуємо політику конфіденційності! -->
+
+<input type="checkbox" name="" id="policy">
+<label for="policy">Згоден на всеза їжу</label>
+
+
+<br>
+  <button type="submit">Залишити заявку</button>
+</form>
+
+
+
+
+
+
+
+
+
+
     </main>
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <a href="./index.html" class="logo"
-          ><span class="logo-brand">Web</span
-          ><span class="logo-white">Studio</span></a
-        >
-        <address class="address">
-          <p>м. Київ, пр-т Лесі Українки, 26</p>
-          <ul class="footer-nav link">
-            <li class="item">
-              <a href="mailto:info@devstudio.com" class="link"
-                >info@devstudio.com</a
-              >
-            </li>
-            <li class="item">
-              <a href="tel:+380961111111" class="link">+38 096 111 11 11</a>
-            </li>
-          </ul>
-        </address>
-      </div>
-    </footer>
+   
     <script src="./js/modal.js"></script>
+    <script>
+      (() => {
+        document
+        .querySelector('.js-speaker-form')
+        .addEventListener('submit', e => {
+          e.preventDefault();
+
+          new FormData(e.currentTarget).forEach((value, name) =>
+          console.log(`${name}: ${value}`),
+          );
+
+          e.currentTarget.reset();
+        });
+      })();
+    </script>
   </body>
 </html>
