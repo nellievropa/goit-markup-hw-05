@@ -650,9 +650,8 @@ background-image: url(../images/icons/feature-icons/astronaut1.svg);
   margin-right: 0;
 }
 .social-list-link:hover,
-.social-list-icon:hover,
-.social-list-link:focus,
-.social-list-icon:focus {
+.social-list-link:focus
+ {
   fill: var(--white);
   background-color: var(--brand-color);
 }
@@ -720,9 +719,9 @@ height: 92px; */
   margin-right: 0;
 }
 .client-list-icon:hover,
-.client-icon:hover,
-.client-list-icon:focus,
-.client-icon:focus {
+
+.client-list-icon:focus
+ {
   fill: var(--brand-color);
   border-color: var(--brand-color);
 }
@@ -737,7 +736,7 @@ height: 92px; */
   /* background-color: #2196f3; */
   /* fill: var(--icon-color); */
 
-  transition: fill 250ms var(--timing-function);
+  /* transition: fill 250ms var(--timing-function); */
 }
 .client-icon:nth-child(6) {
   margin-right: 0;
@@ -859,9 +858,8 @@ height: 92px; */
   margin-right: 0;
 }
 .social-list-link-footer:hover,
-.social-list-icon:hover,
-.social-list-link-footer:focus,
-.social-list-icon:focus {
+.social-list-link-footer:focus
+ {
   /* fill: var(--white); */
   background-color: var(--brand-color);
 }
@@ -985,7 +983,7 @@ a {
 .work-item-card {
   display: block;
 
-  transition: color 250ms var(--timing-function);
+  transition: box-shadow 250ms var(--timing-function);
 }
 .work-item-card:hover,
 .work-item-card:focus {
