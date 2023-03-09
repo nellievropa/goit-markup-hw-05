@@ -79,29 +79,28 @@
           officiis possimus! Soluta, nam perferendis eaque minus corrupti fugiat
           sequi quidem neque.
         </p>
-      <div class="backdrop is-hidden" data-modal>
-        <div class="modal">
-          <p>
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloribus,
-            et? Recusandae quae saepe illo doloribus, est, porro qui libero
-            dolore mollitia eveniet quasi enim, similique laboriosam repellendus
-            distinctio voluptas soluta? Enim dolores ex consequuntur veritatis
-            illo velit fugit cum ea similique qui facere, ratione quasi porro id
-            quia praesentium, perferendis ipsum voluptate harum repellendus
-            cumque debitis. Iusto alias amet in. Dolor, reprehenderit asperiores
-            cum quo rerum accusantium illo dolores aut, facilis quae minima
-            quaerat, ipsum culpa est molestiae hic cupiditate voluptate quidem!
-            Repudiandae quas non tenetur ullam, sapiente eveniet sint assumenda
-            iure amet quasi voluptate aut consequuntur ea autem saepe.
-          </p>
-          <button data-modal-close>Закрити</button>
+        <div class="backdrop is-hidden" data-modal>
+          <div class="modal">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Doloribus, et? Recusandae quae saepe illo doloribus, est, porro
+              qui libero dolore mollitia eveniet quasi enim, similique
+              laboriosam repellendus distinctio voluptas soluta? Enim dolores ex
+              consequuntur veritatis illo velit fugit cum ea similique qui
+              facere, ratione quasi porro id quia praesentium, perferendis ipsum
+              voluptate harum repellendus cumque debitis. Iusto alias amet in.
+              Dolor, reprehenderit asperiores cum quo rerum accusantium illo
+              dolores aut, facilis quae minima quaerat, ipsum culpa est
+              molestiae hic cupiditate voluptate quidem! Repudiandae quas non
+              tenetur ullam, sapiente eveniet sint assumenda iure amet quasi
+              voluptate aut consequuntur ea autem saepe.
+            </p>
+            <button data-modal-close>Закрити</button>
+          </div>
         </div>
       </div>
-      </div>
 
-
-
-<!-- 
+      <!-- 
       <div class="main-page">
         <a href="./index.html"> Back to Main page </a>
         <p>
@@ -313,102 +312,138 @@
       </section> -->
 
       <!-- autocomplete включає або виключає підсказки браузера !! те, що ти вводив раніше -->
-   
-<form class="js-speaker-form" autocomplete="off">
 
-  <!-- вводим имя, телефон и почту -->
-  <!-- автофокус один на сторінці! де стоїть, те і буде активне для введення данних -->
-  <!-- Placeholder-це пізсказка, як вводити прравильно данні -->
-  <label for="name">Ім'я</label>
-  <input type="text" name="user-name" id="name" placeholder="Іван Федорович" autofocus/>
+      <form class="form js-speaker-form" autocomplete="off">
+        <!-- вводим имя, телефон и почту -->
+        <!-- автофокус один на сторінці! де стоїть, те і буде активне для введення данних -->
+        <!-- Placeholder-це пізсказка, як вводити прравильно данні -->
+   <div class="form-fild">
+    <label for="name" class="form-label">Ім'я</label>
+    <input class="form-input"
+      type="text"
+      name="user-name"
+      id="name"
+      placeholder="Іван Федорович"
+      autofocus
+    />
+   </div>
 
-  <label for="tel">Номер телефону</label>
-  <input type="tel" name="user-tel" id="tel">
+      <div class="form-fild">
+        <label for="tel">Номер телефону</label>
+        <input type="tel" name="user-tel" id="tel" />
+      </div>
 
-  <label for="mail">Адреса електронної пошти</label>
-  <input type="email" name="user-mail" id="mail" autocomplete="on">
-  <br>
+    <div class="form-fild">
+      <label for="mail">Адреса електронної пошти</label>
+      <input type="email" name="user-mail" id="mail" autocomplete="on" />
+    </div>
+          
 
-<!-- выбирем темы, на которые хотим делать доклад ЧЕКБОКС -выбираем многое из многого-->
-<!-- name has to be the same  -->
-<div role="group" class="">
-  <input type="checkbox" name="topic" value="html" id="html">
-<label for="html">HTML</label>
-<br>
-<input type="checkbox" name="topic" value="css" id="css" >
-<label for="css">CSS</label>
-<br>
-<input type="checkbox" name="topic" value="pyton" id="pyton" >
-<label for="pyton">PYTON</label>
-</div>
-<br>
-<!-- Выбирем свой уровень разработчика Радіобаттон- вибір одного з багатьох!!!-->
-<!-- У группі должен біть одинаковій name!!! важно!!! чтобі можно біло вібрать только одно значение -->
-<!-- checked - вибирає позицію, якщо він десь визначений у input  -->
-<input type="radio" name="experience" value="junior" id="junior"/>
-<label for="junior">Junior</label>
+        <!-- выбирем темы, на которые хотим делать доклад ЧЕКБОКС -выбираем многое из многого-->
+        <!-- name has to be the same  -->
+        <div role="group" class="group">
+          <h2 class="group-title">Виберіть тему</h2>
+         <ul class="topic-options">
+          <li>
+            <input type="checkbox" name="topic" value="html" id="html" />
+          <label for="html">HTML</label>
+          </li>
+       
+         <li>
+          <input type="checkbox" name="topic" value="css" id="css" />
+          <label for="css">CSS</label>
+         </li>
+        
+         <li>
+          <input type="checkbox" name="topic" value="pyton" id="pyton" />
+          <label for="pyton">PYTON</label>
+         </li>
+         </ul>
+        </div>
+       
+        <!-- Выбирем свой уровень разработчика Радіобаттон- вибір одного з багатьох!!!-->
+        <!-- У группі должен біть одинаковій name!!! важно!!! чтобі можно біло вібрать только одно значение -->
+        <!-- checked - вибирає позицію, якщо він десь визначений у input  -->
+       <div role="group" class="group">
+        <h2 class="group-title">Ваш досвід</h2>
+      <ul class="experience-option">
+        <li>
+          <input type="radio" name="experience" value="junior" id="junior" />
+          <label for="junior">Junior</label>
+        </li>
+        <li>
+          <input type="radio" name="experience" value="middle" id="middle" />
+        <label for="middle">Middle</label>
+        </li>
+      <li>
+        <input type="radio" name="experience" value="senior" id="senior" />
+        <label for="senior">Seniore</label>
+      </li>         
+      </ul>
+       </div>
 
-<input type="radio" name="experience" value="middle" id="middle"/>
-<label for="middle">Middle</label>
+        <!-- Дата та час складно оформлювати, тому використовують кастомні оформлення (готові)-->
+    <div class="form-fild">
+      
+      <label for="date">Дата докладу</label>
+      <input
+        type="datetime-local"
+        name="date"
+        id="date"
+        min="2020-03-12T12:30"
+        max="2025-12-25T12:30"
+        class="date"
+      />
+    </div>
 
-<input type="radio" name="experience" value="senior" id="senior" />
-<label for="senior">Seniore</label>
+        <!-- Выбира6ем на кого ориентирован доклад -->
 
-<!-- Дата та час складно оформлювати, тому використовують кастомні оформлення (готові)-->
-<br>
-<label for="date">Дата докладу</label>
-<input type="datetime-local" name="date" id="date" min="2020-03-12T12:30"
-max="2025-12-25T12:30">
+        <!--  Загружаем презентацію: спеціальний атрибут-file -дозволяє вибрати ізагрузити файл з компа -->
+    
+     <div class="form-fild">
+      <label for="pdf">Завантажте файл в форматі ПДФ</label>
+      <input type="file" name="pdf" id="pdf" />
+     </div>
 
-<!-- Выбира6ем на кого ориентирован доклад -->
+        <!-- Залишити коментар щоб закрити користувачу можливість змінювати розмір поля в css додаємо властивість resize -->
+    
+       <div class="form-fild">
+        <label for="comment">Залиште свій коментар</label>
+        <textarea
+        class="comment"
+          name="comment"
+          id="comment"
+          rows="10"
+          placeholder="Залишити коментар"
+        ></textarea>
+       </div>
 
+        <!-- Підтверджуємо політику конфіденційності! -->
 
-<!--  Загружаем презентацію: спеціальний атрибут-file -дозволяє вибрати ізагрузити файл з компа -->
-<br>
-<label for="pdf">Завантажте файл в форматі ПДФ</label>
-<input type="file" name="pdf" id="pdf">
+      <div class="form-fild">
+        <input type="checkbox" name="" id="policy" />
+        <label for="policy">Згоден на всеза їжу</label>
+      </div>
 
-<!-- Залишити коментар щоб закрити користувачу можливість змінювати розмір поля в css додаємо властивість resize -->
-<br>
-<label for="comment">Залиште свій коментар</label>
-<textarea name="comment" id="comment"  rows="10" placeholder="Залишити коментар"></textarea>
-
-
-<!-- Підтверджуємо політику конфіденційності! -->
-
-<input type="checkbox" name="" id="policy">
-<label for="policy">Згоден на всеза їжу</label>
-
-
-<br>
-  <button type="submit">Залишити заявку</button>
-</form>
-
-
-
-
-
-
-
-
-
-
+     
+        <button type="submit">Залишити заявку</button>
+      </form>
     </main>
-   
+
     <script src="./js/modal.js"></script>
     <script>
       (() => {
         document
-        .querySelector('.js-speaker-form')
-        .addEventListener('submit', e => {
-          e.preventDefault();
+          .querySelector(".js-speaker-form")
+          .addEventListener("submit", (e) => {
+            e.preventDefault();
 
-          new FormData(e.currentTarget).forEach((value, name) =>
-          console.log(`${name}: ${value}`),
-          );
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`)
+            );
 
-          e.currentTarget.reset();
-        });
+            e.currentTarget.reset();
+          });
       })();
     </script>
   </body>

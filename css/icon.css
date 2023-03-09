@@ -332,3 +332,90 @@ transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 textarea {
   resize: none;
 }
+
+.form {
+  width: 600px;
+  outline: 2px dashed yellowgreen;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px;
+  margin-bottom: 300px;
+}
+.form-fild {
+  outline: 1px solid blueviolet;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+/* .form-fild label {
+  margin-bottom: 4 px;
+} */
+.form-fild input {
+  margin: 0;
+  margin-top: 5px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px dashed palevioletred;
+  font-size: 25px;
+}
+/* варіант як можно зробити ширину рамки на весь блок*/
+
+/* .form-fild input {
+  width: 100%;
+} */
+.form-fild input::placeholder {
+  color: blueviolet;
+  text-align: right;
+}
+
+.group {
+margin-bottom: 24px;
+}
+.group-title {
+  margin-top: 0;
+}
+/* як стилізувати чекбокси і запишем стилізацію через тип (не задаючи зайвий класс) */
+.topic-options,
+.experience-option {
+  padding: 0;
+  margin: 32px;
+  list-style: none;
+}
+.topic-options li,
+.experience-option li {
+  display: flex;
+  align-items: center;
+}
+.topic-options input[type="checkbox"] {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+ /* border-radius: 50%; не працює, бо чекбокси важко стилізуються*/
+}
+
+.topic-options label {
+  font-size: 30px;
+}
+
+.experience-option input {
+  width: 36px;
+  height: 36px;
+  margin-right: 12px;
+}
+.experience-option label {
+  font-size: 30px;
+}
+/* стилізуємо дату  */
+.form .date {
+  border-color: brown;
+  border-width: 5px;
+  padding: 20ox 40px;
+  font-size: 32px;
+  color: green;
+  background-color: aquamarine;
+}
+/* З ІНПУТ не працюють Бифор і Афтер, бо немає контенту!!! */
+.comment {
+  padding: 25px;
+  font-size: 25px;
+}
